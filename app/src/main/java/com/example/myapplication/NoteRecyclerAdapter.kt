@@ -32,23 +32,6 @@ class NoteRecyclerAdapter(
         return arrayList.size
     }
 
-    /*
-    override fun getItemViewType(position: Int): Int {
-        return when {
-            position % 8 == 3 -> ADS position %
-            8 == 7 -> POLLS
-            else -> DATA
-        }
-    }
-    //
-
-     override fun getItemViewType(position: Int): Int {
-         return if (position > 1 && (position + 1) % 4 == 0) {
-             AD_TYPE
-         } else CONTENT_TYPE
-         }
-     }*/
-
     inner class NotesViewHolder(private val binding: ItemLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(blog: Blog) {

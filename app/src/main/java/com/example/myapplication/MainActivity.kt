@@ -1,7 +1,6 @@
 package com.example.myapplication
 
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -24,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         binding.recycler.layoutManager = LinearLayoutManager(this)
 
         viewModel.lst.observe(this) {
-            binding.recycler.adapter = NoteRecyclerAdapter(viewModel, it, this)
+            binding.recycler.adapter = NoteRecyclerAdsAdapter(viewModel, it)
         }
 
         binding.button.setOnClickListener {
